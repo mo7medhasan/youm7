@@ -1,0 +1,152 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: myFirstFont;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.col-1 {
+  width: 8.33%;
+}
+.col-2 {
+  width: 16.66%;
+}
+.col-3 {
+  width: 25%;
+}
+.col-4 {
+  width: 33.33%;
+}
+.col-5 {
+  width: 41.66%;
+}
+.col-6 {
+  width: 50%;
+}
+.col-7 {
+  width: 58.33%;
+}
+.col-8 {
+  width: 66.66%;
+}
+.col-9 {
+  width: 75%;
+}
+.col-10 {
+  width: 83.33%;
+}
+.col-11 {
+  width: 91.66%;
+}
+.col-12 {
+  width: 100%;
+}
+@font-face {
+  font-family: myFirstFont;
+  src: url("../../../assets/custom-font/ArbFONTS-Droid-Arabic-Kufi-Bold.ttf");
+}
+@media only screen and (max-width: 900px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+  .container {
+    width: 100% !important;
+  padding: 0 !important;
+  display: flex;
+  margin: 0;
+
+  }
+  .footerMenu,.social-footer{
+    border: none;
+    border-bottom: solid 1px #ccc;
+    padding: 2%;
+  }
+  .footerMenu{
+    order: 2;
+  }.social-footer{
+    order: 1 !important;
+  }
+  .footerMenu ul li {
+    width: 50% !important;
+ 
+  }.newFooterMenu{
+    display: none !important;
+  }
+}
+.footer-up {
+  background-color: #3A3A3A;
+  color: #ccc; font-family: myFirstFont;
+  font-size: 15px;
+  font-weight: 400;
+}
+.container {
+  width: 900px;
+  margin: auto;
+display: flex;
+flex-wrap: wrap;
+  padding-right: 25px;
+}
+.container div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.footerMenu ul {
+  list-style: none;
+}
+.footerMenu ul li {
+  width: 33%;
+  display: inline-block;
+  padding: 1%;
+}
+.footer-up a { 
+  font-size: 13px;
+  font-weight: 400;
+  text-decoration: none;
+  color: #ccc;
+  /* width:100%; */
+}.social-footer{  display: flex;
+  margin: 5% auto;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid #000 ;
+}
+.social-footer a,
+.social-footer div {
+  padding: 1%;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.newFooterMenu a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+
+}
+.footer-up a:hover{
+  color:#e03030;
+}
+.footer-bottom{
+  background-color: #323232;
+  color: #ccc;
+}
+.social-new-ico{
+  width:100%;
+  
+  display:flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.social-new-ico a img, .social-new-ico a{
+  height:30px;
+
+margin-left: 2% ;
+}

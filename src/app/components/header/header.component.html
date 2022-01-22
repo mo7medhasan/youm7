@@ -1,37 +1,178 @@
 <header>
-    <nav class="nav-up">
-        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="desktop" class="svg-inline--fa fa-desktop fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M528 0H48C21.5 0 0 21.5 0 48v320c0 26.5 21.5 48 48 48h192l-16 48h-72c-13.3 0-24 10.7-24 24s10.7 24 24 24h272c13.3 0 24-10.7 24-24s-10.7-24-24-24h-72l-16-48h192c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zm-16 352H64V64h448v288z"></path></svg>
-    </nav>
-  <nav id="main-navbar" class="navbar navbar-default navbar-fixed-top">
-    <div class="container navbar-container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-          aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">Frrk.io</a>
+  <nav class="nav-up">
+    <div class="container">
+      <div class="nav-up-right">
+        <div class="nav-up-right-logo">
+          <a [routerLink]="['/']" routerLinkActive="router-link-active"><img src="../../../assets/images/logo-youm7.png"
+              alt="logo youm7" id="logo-youm7" /></a>
+        </div>
+        <div class="nav-up-right-logo-Advertising">
+          <a [routerLink]="['/']" routerLinkActive="router-link-active"><img
+              src="../../../assets/images/Logo-Advertising-to-youm7.png" alt="Logo Advertising to youm7" /></a>
+        </div>
       </div>
-      <div id="navbar" class="navbar-collapse collapse">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">Random</a></li>
-          <li><a href="#about">Happiness</a></li>
-          <li><a href="#portfolio">Hacking</a></li>
-          <li><a href="#contact">News</a></li>
-          <li><a href="#blog">Technology</a></li>
-          
-        </ul>
-      </div>
-      <div class="top-social">
-        <ul id="top-social-menu">
-          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Investors</a></li>
-        </ul>
+      <div class="nav-up-left">
+        <div class="nav-up-left-calender">
+          <fa-icon [icon]="calendarIcon"></fa-icon> &nbsp; {{dateString}}
+        </div>
+        &nbsp;
+        <div class="nav-up-left-clock">
+          <fa-icon [icon]="ClockIcon" size="lg"></fa-icon>&nbsp;{{timeString}}&nbsp;<span
+            id="location-cairo">القاهرة</span>
+        </div>
+
       </div>
     </div>
   </nav>
+  <nav class="nav-down">
+    <div class="container">
+      <input type="checkbox" id="click">
+      <label for="click" class="menu-btn">
+        <fa-icon [icon]="barsIcon"></fa-icon>
+      </label>
+      <div class="nav-down-content-sm">
+
+        <div class="content-sm-img">
+          <a [routerLink]="['/']" routerLinkActive="router-link-active"> <img
+              src="../../../assets/images/logo-youm7- World-Youth-Forum.png" alt="logo youm7  World Youth Forum"></a>
+        </div>
+        <div class="content-sm-img">
+          <a [routerLink]="['/']" routerLinkActive="router-link-active"> <img
+              src="../../../assets/images/رئيس التحرير اكرم القصاص.png" alt="logo youm7  World Youth Forum"
+              srcset=""></a>
+        </div>
+        <div class="content-sm-icon">
+          <fa-icon [icon]="searchIcon"></fa-icon>
+        </div>
+        <div class="content-sm-icon">
+          <fa-icon [icon]="desktopIcon"></fa-icon>
+        </div>
+      </div>
+      <ul class="c-menu__items">
+        <li class="c-menu__close"><label for="click" class="menu-btn c-menu__close">
+            اغلق القائمة</label></li>
+        <li class="c-menu__item menu__lg">
+          <h2><a href="/"><span class="iconHome">
+                <fa-icon [icon]="homeIcon"></fa-icon>
+              </span>الرئيسية </a></h2>
+        </li>
+        <li class="c-menu__item menu__lg">
+          <h2><a href="/Section/أخبار-عاجلة/65/1"> عاجل </a></h2>
+        </li>
+        <li class="c-menu__item menu__lg">
+          <h2><a href="/Section/سياسة/319/1"> سياسة </a></h2>
+        </li>
+        <li class="c-menu__item menu__lg">
+          <h2><a href="/Section/تقارير-مصرية/97/1"> تقارير </a></h2>
+        </li>
+        <li class="c-menu__item menu__lg">
+          <h2><a href="/Section/حوادث/203/1"> حوادث </a></h2>
+        </li>
+        <li class="c-menu__item menu__lg">
+          <h2><a href="/Section/أخبار-المحافظات/296/1"> محافظات </a></h2>
+        </li>
+        <li class="c-menu__item menu__lg">
+          <h2><a href="/Section/تحقيقات-وملفات/12/1"> تحقيقات </a></h2>
+        </li>
+        <li class="c-menu__item menu__lg">
+          <h2><a href="/Section/أخبار-الرياضة/298/1"> رياضة </a></h2>
+        </li>
+        <li class="c-menu__item menu__lg">
+          <h2><a href="/Section/كرة-عالمية/332/1"> كرة عالمية </a></h2>
+        </li>
+        <li class="show-more"id="more">
+
+          <a href="#" class="show-more" >المزيد</a>
+
+          <ul class="dropdown_item">
+            <li class="c-menu__item ">
+              <h2><a href="/Section/اقتصاد-وبورصة/297/1"> اقتصاد وبورصة </a></h2>
+            </li>
+            <li class="c-menu__item ">
+              <h2><a href="/Section/أخبار-عربية/88/1"> عرب </a></h2>
+            </li>
+            <li class="c-menu__item ">
+              <h2><a href="/Section/أخبار-عالمية/286/1"> عالم </a></h2>
+            </li>
+            <li class="c-menu__item ">
+              <h2><a href="/Section/كاريكاتير-اليوم/192/1"> كاريكاتير </a></h2>
+            </li>
+            <li class="c-menu__item ">
+              <h2><a href="/Section/فن/48/1"> فن </a></h2>
+            </li>
+            <li class="c-menu__item ">
+              <h2><a href="/Section/تليفزيون/251/1"> تليفزيون </a></h2>
+            </li>
+            <li class="c-menu__item ">
+              <h2><a href="/Section/ثقافة/94/1"> ثقافة </a></h2>
+            </li>
+            <li class="c-menu__item ">
+              <h2><a href="/Section/المرأة-والمنوعات/89/1"> مرأة و منوعات </a></h2>
+            </li>
+            <li class="c-menu__item ">
+              <h2><a href="/Section/صحة-وطب/245/1"> صحة </a></h2>
+            </li>
+            <li class="c-menu__item ">
+              <h2><a href="/Section/ألبومات-اليوم-السابع/291/1"> ألبومات </a></h2>
+            </li>
+            <li class="c-menu__item ">
+              <h2><a href="/Editor/AllEditors"> مقالات </a></h2>
+            </li>
+            <li class="c-menu__item ">
+              <h2><a href="/Section/علوم-و-تكنولوجيا/328/1"> تكنولوجيا </a></h2>
+            </li>
+            <li class="c-menu__item ">
+              <h2><a href="/Section/فيديو-7/355/1">فيديو 7</a></h2>
+            </li>
+
+          </ul>
+        </li>
+        <li class="c-menu__item hidden">
+          <h2><a href="/Section/اقتصاد-وبورصة/297/1"> اقتصاد وبورصة </a></h2>
+        </li>
+        <li class="c-menu__item hidden">
+          <h2><a href="/Section/أخبار-عربية/88/1"> عرب </a></h2>
+        </li>
+        <li class="c-menu__item hidden">
+          <h2><a href="/Section/أخبار-عالمية/286/1"> عالم </a></h2>
+        </li>
+        <li class="c-menu__item hidden">
+          <h2><a href="/Section/كاريكاتير-اليوم/192/1"> كاريكاتير </a></h2>
+        </li>
+        <li class="c-menu__item hidden">
+          <h2><a href="/Section/فن/48/1"> فن </a></h2>
+        </li>
+        <li class="c-menu__item hidden">
+          <h2><a href="/Section/تليفزيون/251/1"> تليفزيون </a></h2>
+        </li>
+        <li class="c-menu__item hidden">
+          <h2><a href="/Section/ثقافة/94/1"> ثقافة </a></h2>
+        </li>
+        <li class="c-menu__item hidden">
+          <h2><a href="/Section/المرأة-والمنوعات/89/1"> مرأة و منوعات </a></h2>
+        </li>
+        <li class="c-menu__item hidden">
+          <h2><a href="/Section/صحة-وطب/245/1"> صحة </a></h2>
+        </li>
+        <li class="c-menu__item hidden">
+          <h2><a href="/Section/ألبومات-اليوم-السابع/291/1"> ألبومات </a></h2>
+        </li>
+        <li class="c-menu__item hidden">
+          <h2><a href="/Editor/AllEditors"> مقالات </a></h2>
+        </li>
+        <li class="c-menu__item hidden">
+          <h2><a href="/Section/علوم-و-تكنولوجيا/328/1"> تكنولوجيا </a></h2>
+        </li>
+        <li class="c-menu__item hidden">
+          <h2><a href="/Section/فيديو-7/355/1">فيديو 7</a></h2>
+        </li>
+
+      </ul>
+    </div>
+  </nav>
+
+
+
+
+
 </header>
